@@ -328,7 +328,7 @@ class Zend_Application
         }
 
         if (!class_exists($class, false)) {
-            //require_once $path;
+            require_once $path;
             if (!class_exists($class, false)) {
                 throw new Zend_Application_Exception(
                     'Bootstrap class not found'
