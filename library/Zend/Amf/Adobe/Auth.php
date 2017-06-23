@@ -20,16 +20,16 @@
  */
 
 /** @see Zend_Amf_Auth_Abstract */
-require_once 'Zend/Amf/Auth/Abstract.php';
+//require_once 'Zend/Amf/Auth/Abstract.php';
 
 /** @see Zend_Acl */
-require_once 'Zend/Acl.php';
+//require_once 'Zend/Acl.php';
 
 /** @see Zend_Auth_Result */
-require_once 'Zend/Auth/Result.php';
+//require_once 'Zend/Auth/Result.php';
 
 /** @see Zend_Xml_Security */
-require_once 'Zend/Xml/Security.php';
+//require_once 'Zend/Xml/Security.php';
 
 /**
  * This class implements authentication against XML file with roles for Flex Builder.
@@ -68,11 +68,11 @@ class Zend_Amf_Adobe_Auth extends Zend_Amf_Auth_Abstract
 /*
 Roles file format:
  <roles>
-   <role id=â€adminâ€>
-        <user name=â€user1â€ password=â€pwdâ€/>
+   <role id=â€?adminâ€?>
+        <user name=â€?user1â€? password=â€?pwdâ€?/>
     </role>
-   <role id=â€hrâ€>
-        <user name=â€user2â€ password=â€pwd2â€/>
+   <role id=â€?hrâ€?>
+        <user name=â€?user2â€? password=â€?pwd2â€?/>
     </role>
 </roles>
 */
@@ -109,7 +109,7 @@ Roles file format:
             /**
              * @see Zend_Auth_Adapter_Exception
              */
-            require_once 'Zend/Auth/Adapter/Exception.php';
+            //require_once 'Zend/Auth/Adapter/Exception.php';
             throw new Zend_Auth_Adapter_Exception('Username/password should be set');
         }
 
