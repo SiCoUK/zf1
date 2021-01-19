@@ -22,12 +22,12 @@
 /**
  * @see Zend_Loader_PluginLoader
  */
-require_once 'Zend/Loader/PluginLoader.php';
+//require_once 'Zend/Loader/PluginLoader.php';
 
 /**
  * @see Zend_Json
  */
-require_once 'Zend/Json.php';
+//require_once 'Zend/Json.php';
 
 /**
  * @category   Zend
@@ -290,7 +290,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
                     /**
                      * @see Zend_Paginator_Exception
                      */
-                    require_once 'Zend/Paginator/Exception.php';
+                    //require_once 'Zend/Paginator/Exception.php';
 
                     throw new Zend_Paginator_Exception('No adapter for type ' . $type);
                 }
@@ -456,7 +456,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
             /**
              * @see Zend_Paginator_Exception
              */
-            require_once 'Zend/Paginator/Exception.php';
+            //require_once 'Zend/Paginator/Exception.php';
 
             throw new Zend_Paginator_Exception(
                 'Zend_Paginator only accepts instances of the type ' .
@@ -699,7 +699,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
             /**
              * @see Zend_Paginator_Exception
              */
-            require_once 'Zend/Paginator/Exception.php';
+            //require_once 'Zend/Paginator/Exception.php';
 
             throw new Zend_Paginator_Exception('Page ' . $pageNumber . ' does not exist');
         }
@@ -714,7 +714,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
             /**
              * @see Zend_Paginator_Exception
              */
-            require_once 'Zend/Paginator/Exception.php';
+            //require_once 'Zend/Paginator/Exception.php';
 
             throw new Zend_Paginator_Exception('Page ' . $pageNumber . ' does not'
                                              . ' contain item number ' . $itemNumber);
@@ -915,7 +915,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
             /**
              * @see Zend_Controller_Action_HelperBroker
              */
-            require_once 'Zend/Controller/Action/HelperBroker.php';
+            //require_once 'Zend/Controller/Action/HelperBroker.php';
 
             $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
             if ($viewRenderer->view === null) {
@@ -1143,7 +1143,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
                     /**
                      * @see Zend_View_Exception
                      */
-                    require_once 'Zend/View/Exception.php';
+                    //require_once 'Zend/View/Exception.php';
 
                     throw new Zend_View_Exception('Scrolling style must implement ' .
                         'Zend_Paginator_ScrollingStyle_Interface');
@@ -1163,7 +1163,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
                 /**
                  * @see Zend_View_Exception
                  */
-                require_once 'Zend/View/Exception.php';
+                //require_once 'Zend/View/Exception.php';
 
                 throw new Zend_View_Exception('Scrolling style must be a class ' .
                     'name or object implementing Zend_Paginator_ScrollingStyle_Interface');

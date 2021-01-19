@@ -23,22 +23,22 @@
 /**
  * @see Zend_Session
  */
-require_once 'Zend/Session.php';
+//require_once 'Zend/Session.php';
 
 /**
  * @see Zend_Db_Table_Abstract
  */
-require_once 'Zend/Db/Table/Abstract.php';
+//require_once 'Zend/Db/Table/Abstract.php';
 
 /**
  * @see Zend_Db_Table_Row_Abstract
  */
-require_once 'Zend/Db/Table/Row/Abstract.php';
+//require_once 'Zend/Db/Table/Row/Abstract.php';
 
 /**
  * @see Zend_Config
  */
-require_once 'Zend/Config.php';
+//require_once 'Zend/Config.php';
 
 /**
  * Zend_Session_SaveHandler_DbTable
@@ -168,7 +168,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception(
                 '$config must be an instance of Zend_Config or array of key/value pairs containing '
@@ -233,7 +233,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
             throw new Zend_Session_SaveHandler_Exception();
         }
 
@@ -414,7 +414,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception('session.save_path is a path and not a table name.');
         }
@@ -446,7 +446,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception(
                 "Value for configuration option '" . self::PRIMARY_ASSIGNMENT . "' must have an assignment "
@@ -455,7 +455,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception(
                 "Value for configuration option '" . self::PRIMARY_ASSIGNMENT . "' must have an assignment "
@@ -475,7 +475,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception(
                 "Configuration must define '" . self::MODIFIED_COLUMN . "' which names the "
@@ -484,7 +484,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception(
                 "Configuration must define '" . self::LIFETIME_COLUMN . "' which names the "
@@ -493,7 +493,7 @@ class Zend_Session_SaveHandler_DbTable
             /**
              * @see Zend_Session_SaveHandler_Exception
              */
-            require_once 'Zend/Session/SaveHandler/Exception.php';
+            //require_once 'Zend/Session/SaveHandler/Exception.php';
 
             throw new Zend_Session_SaveHandler_Exception(
                 "Configuration must define '" . self::DATA_COLUMN . "' which names the "

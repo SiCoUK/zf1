@@ -24,10 +24,10 @@
 /**
  * @see Zend_Feed_Element
  */
-require_once 'Zend/Feed/Element.php';
+//require_once 'Zend/Feed/Element.php';
 
 /** @see Zend_Xml_Security */
-require_once 'Zend/Xml/Security.php';
+//require_once 'Zend/Xml/Security.php';
 
 /**
  * The Zend_Feed_Abstract class is an abstract class representing feeds.
@@ -83,7 +83,7 @@ abstract class Zend_Feed_Abstract extends Zend_Feed_Element implements Iterator,
                 /**
                  * @see Zend_Feed_Exception
                  */
-                require_once 'Zend/Feed/Exception.php';
+                //require_once 'Zend/Feed/Exception.php';
                 throw new Zend_Feed_Exception('Feed failed to load, got response code ' . $response->getStatus() . '; request: ' . $client->getLastRequest() . "\nresponse: " . $response->asString());
             }
 
@@ -131,7 +131,7 @@ abstract class Zend_Feed_Abstract extends Zend_Feed_Element implements Iterator,
             /**
              * @see Zend_Feed_Exception
              */
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             throw new Zend_Feed_Exception("DOMDocument cannot parse XML: $php_errormsg");
         }
 
@@ -273,7 +273,7 @@ abstract class Zend_Feed_Abstract extends Zend_Feed_Element implements Iterator,
     protected function _importFeedFromString($feed)
     {
         if (trim($feed) == '') {
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             throw new Zend_Feed_Exception('Remote feed being imported'
             . ' is an Empty string or comes from an empty HTTP response');
         }
@@ -294,7 +294,7 @@ abstract class Zend_Feed_Abstract extends Zend_Feed_Element implements Iterator,
             /**
              * @see Zend_Feed_Exception
              */
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             throw new Zend_Feed_Exception($errormsg);
         }
 

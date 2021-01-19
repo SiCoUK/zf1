@@ -22,7 +22,7 @@
 /**
  * @see Zend_Feed_Writer_Renderer_RendererAbstract
  */
-require_once 'Zend/Feed/Writer/Renderer/RendererAbstract.php';
+//require_once 'Zend/Feed/Writer/Renderer/RendererAbstract.php';
 
 /**
  * @category   Zend
@@ -90,7 +90,7 @@ class Zend_Feed_Writer_Renderer_Entry_Rss
     {
         if(!$this->getDataContainer()->getDescription()
         && !$this->getDataContainer()->getTitle()) {
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             $message = 'RSS 2.0 entry elements SHOULD contain exactly one'
             . ' title element but a title has not been set. In addition, there'
             . ' is no description as required in the absence of a title.';
@@ -120,7 +120,7 @@ class Zend_Feed_Writer_Renderer_Entry_Rss
     {
         if(!$this->getDataContainer()->getDescription()
         && !$this->getDataContainer()->getTitle()) {
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             $message = 'RSS 2.0 entry elements SHOULD contain exactly one'
             . ' description element but a description has not been set. In'
             . ' addition, there is no title element as required in the absence'
@@ -222,7 +222,7 @@ class Zend_Feed_Writer_Renderer_Entry_Rss
             return;
         }
         if (!isset($data['type'])) {
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             $exception = new Zend_Feed_Exception('Enclosure "type" is not set');
             if (!$this->_ignoreExceptions) {
                 throw $exception;
@@ -232,7 +232,7 @@ class Zend_Feed_Writer_Renderer_Entry_Rss
             return;
         }
         if (!isset($data['length'])) {
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             $exception = new Zend_Feed_Exception('Enclosure "length" is not set');
             if (!$this->_ignoreExceptions) {
                 throw $exception;
@@ -242,7 +242,7 @@ class Zend_Feed_Writer_Renderer_Entry_Rss
             return;
         }
         if (isset($data['length']) && (int) $data['length'] <= 0) {
-            require_once 'Zend/Feed/Exception.php';
+            //require_once 'Zend/Feed/Exception.php';
             $exception = new Zend_Feed_Exception('Enclosure "length" must be an integer'
             . ' indicating the content\'s length in bytes');
             if (!$this->_ignoreExceptions) {

@@ -24,7 +24,7 @@
 /**
  * @see Zend_Service_StrikeIron_Decorator
  */
-require_once 'Zend/Service/StrikeIron/Decorator.php';
+//require_once 'Zend/Service/StrikeIron/Decorator.php';
 
 
 /**
@@ -65,7 +65,7 @@ class Zend_Service_StrikeIron_Base
             /**
              * @see Zend_Service_StrikeIron_Exception
              */
-            require_once 'Zend/Service/StrikeIron/Exception.php';
+            //require_once 'Zend/Service/StrikeIron/Exception.php';
             throw new Zend_Service_StrikeIron_Exception('SOAP extension is not enabled');
         }
 
@@ -102,7 +102,7 @@ class Zend_Service_StrikeIron_Base
             /**
              * @see Zend_Service_StrikeIron_Exception
              */
-            require_once 'Zend/Service/StrikeIron/Exception.php';
+            //require_once 'Zend/Service/StrikeIron/Exception.php';
             throw new Zend_Service_StrikeIron_Exception($message, $e->getCode(), $e);
         }
 
@@ -148,7 +148,7 @@ class Zend_Service_StrikeIron_Base
                     /**
                      * @see Zend_Service_StrikeIron_Exception
                      */
-                    require_once 'Zend/Service/StrikeIron/Exception.php';
+                    //require_once 'Zend/Service/StrikeIron/Exception.php';
                     throw new Zend_Service_StrikeIron_Exception('Header must be instance of SoapHeader');
                 }
 
@@ -267,7 +267,7 @@ class Zend_Service_StrikeIron_Base
             /**
              * @see Zend_Service_StrikeIron_Exception
              */
-            require_once 'Zend/Service/StrikeIron/Exception.php';
+            //require_once 'Zend/Service/StrikeIron/Exception.php';
             throw new Zend_Service_StrikeIron_Exception($msg);
         }
 

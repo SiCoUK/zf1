@@ -217,7 +217,7 @@ class Zend_Tool_DatabaseSchemaProvider extends Zend_Tool_Project_Provider_Abstra
             }
         }
 
-        require_once 'Zend/Loader/Autoloader.php';
+        //require_once 'Zend/Loader/Autoloader.php';
         $autoloader = Zend_Loader_Autoloader::getInstance();
         $autoloader->registerNamespace('Zend_');
     }

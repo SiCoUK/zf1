@@ -21,7 +21,7 @@
  */
 
 /** Zend_Dojo_View_Helper_DijitContainer */
-require_once 'Zend/Dojo/View/Helper/DijitContainer.php';
+//require_once 'Zend/Dojo/View/Helper/DijitContainer.php';
 
 /**
  * Arbitrary dijit support
@@ -62,7 +62,7 @@ class Zend_Dojo_View_Helper_CustomDijit extends Zend_Dojo_View_Helper_DijitConta
         if (!array_key_exists('dojoType', $params)
             && (null === $this->_defaultDojoType)
         ) {
-            require_once 'Zend/Dojo/View/Exception.php';
+            //require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception('No dojoType specified; cannot create dijit');
         }
 
@@ -100,7 +100,7 @@ class Zend_Dojo_View_Helper_CustomDijit extends Zend_Dojo_View_Helper_DijitConta
         if (!array_key_exists('dojoType', $params)
             && (null === $this->_defaultDojoType)
         ) {
-            require_once 'Zend/Dojo/View/Exception.php';
+            //require_once 'Zend/Dojo/View/Exception.php';
             throw new Zend_Dojo_View_Exception('No dojoType specified; cannot create dijit');
         }
 

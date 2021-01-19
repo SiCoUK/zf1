@@ -91,7 +91,7 @@ class Zend_Ldap
         /**
          * @see Zend_Ldap_Filter_Abstract
          */
-        require_once 'Zend/Ldap/Filter/Abstract.php';
+        //require_once 'Zend/Ldap/Filter/Abstract.php';
         return Zend_Ldap_Filter_Abstract::escapeValue($str);
     }
 
@@ -108,7 +108,7 @@ class Zend_Ldap
         /**
          * @see Zend_Ldap_Dn
          */
-        require_once 'Zend/Ldap/Dn.php';
+        //require_once 'Zend/Ldap/Dn.php';
         return Zend_Ldap_Dn::checkDn($dn, $keys, $vals);
     }
 
@@ -125,7 +125,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null, 'LDAP extension not loaded',
                 Zend_Ldap_Exception::LDAP_X_EXTENSION_NOT_LOADED);
         }
@@ -166,7 +166,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 /* For some reason draft-ietf-ldapext-ldap-c-api-xx.txt error
                  * codes in OpenLDAP are negative values from -1 to -17.
                  */
@@ -316,7 +316,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null, "Unknown Zend_Ldap option: $key");
         }
         $this->_options = $permittedOptions;
@@ -482,7 +482,7 @@ class Zend_Ldap
         /**
          * @see Zend_Ldap_Filter_Abstract
          */
-        require_once 'Zend/Ldap/Filter/Abstract.php';
+        //require_once 'Zend/Ldap/Filter/Abstract.php';
         $this->_splitName($acctname, $dname, $aname);
         $accountFilterFormat = $this->_getAccountFilterFormat();
         $aname = Zend_Ldap_Filter_Abstract::escapeValue($aname);
@@ -534,7 +534,7 @@ class Zend_Ldap
         /**
          * @see Zend_Ldap_Dn
          */
-        require_once 'Zend/Ldap/Dn.php';
+        //require_once 'Zend/Ldap/Dn.php';
         if (Zend_Ldap_Dn::checkDn($acctname)) return $acctname;
         $acctname = $this->getCanonicalAccountName($acctname, Zend_Ldap::ACCTNAME_FORM_USERNAME);
         $acct = $this->_getAccount($acctname, ['dn']);
@@ -582,7 +582,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null,
                 "Binding domain is not an authority for user: $acctname",
                 Zend_Ldap_Exception::LDAP_X_DOMAIN_MISMATCH);
@@ -592,7 +592,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null, "Invalid account name syntax: $acctname");
         }
 
@@ -617,7 +617,7 @@ class Zend_Ldap
                     /**
                      * @see Zend_Ldap_Exception
                      */
-                    require_once 'Zend/Ldap/Exception.php';
+                    //require_once 'Zend/Ldap/Exception.php';
                     throw new Zend_Ldap_Exception(null, 'Option required: accountDomainNameShort');
                 }
                 return "$accountDomainNameShort\\$uname";
@@ -627,7 +627,7 @@ class Zend_Ldap
                     /**
                      * @see Zend_Ldap_Exception
                      */
-                    require_once 'Zend/Ldap/Exception.php';
+                    //require_once 'Zend/Ldap/Exception.php';
                     throw new Zend_Ldap_Exception(null, 'Option required: accountDomainName');
                 }
                 return "$uname@$accountDomainName";
@@ -635,7 +635,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception(null, "Unknown canonical name form: $form");
         }
     }
@@ -652,7 +652,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null, 'Base DN not set');
         }
 
@@ -661,7 +661,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null, 'Invalid account filter');
         }
 
@@ -682,14 +682,14 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             $code = Zend_Ldap_Exception::LDAP_NO_SUCH_OBJECT;
             $str = "No object found for: $accountFilter";
         } else {
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             $code = Zend_Ldap_Exception::LDAP_OPERATIONS_ERROR;
             $str = "Unexpected result count ($count) for: $accountFilter";
         }
@@ -698,7 +698,7 @@ class Zend_Ldap
         /**
          * @see Zend_Ldap_Exception
          */
-        require_once 'Zend/Ldap/Exception.php';
+        //require_once 'Zend/Ldap/Exception.php';
         throw new Zend_Ldap_Exception($this, $str, $code);
     }
 
@@ -754,7 +754,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception(null, 'A host parameter is required');
         }
 
@@ -802,7 +802,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             $zle = new Zend_Ldap_Exception($this, "$host:$port");
             $this->disconnect();
             throw $zle;
@@ -810,7 +810,7 @@ class Zend_Ldap
         /**
          * @see Zend_Ldap_Exception
          */
-        require_once 'Zend/Ldap/Exception.php';
+        //require_once 'Zend/Ldap/Exception.php';
         throw new Zend_Ldap_Exception(null, "Failed to connect to LDAP server: $host:$port");
     }
 
@@ -845,7 +845,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Dn
              */
-            require_once 'Zend/Ldap/Dn.php';
+            //require_once 'Zend/Ldap/Dn.php';
             if (!Zend_Ldap_Dn::checkDn($username)) {
                 if ($this->_getBindRequiresDn()) {
                     /* moreCreds stops an infinite loop if _getUsername does not
@@ -870,7 +870,7 @@ class Zend_Ldap
                         /**
                          * @see Zend_Ldap_Exception
                          */
-                        require_once 'Zend/Ldap/Exception.php';
+                        //require_once 'Zend/Ldap/Exception.php';
                         throw new Zend_Ldap_Exception(null, 'Binding requires username in DN form');
                     }
                 } else {
@@ -888,7 +888,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             $zle = new Zend_Ldap_Exception(null,
                 'Empty password not allowed - see allowEmptyPassword option.');
         } else {
@@ -901,7 +901,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             switch ($this->getLastErrorCode()) {
                 case Zend_Ldap_Exception::LDAP_SERVER_DOWN:
                     /* If the error is related to establishing a connection rather than binding,
@@ -997,7 +997,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception($this, 'searching: ' . $filter);
         }
         if ($sort !== null && is_string($sort)) {
@@ -1006,7 +1006,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception($this, 'sorting: ' . $sort);
             }
         }
@@ -1014,7 +1014,7 @@ class Zend_Ldap
         /**
          * Zend_Ldap_Collection_Iterator_Default
          */
-        require_once 'Zend/Ldap/Collection/Iterator/Default.php';
+        //require_once 'Zend/Ldap/Collection/Iterator/Default.php';
         $iterator = new Zend_Ldap_Collection_Iterator_Default($this, $search);
         return $this->_createCollection($iterator, $collectionClass);
     }
@@ -1033,7 +1033,7 @@ class Zend_Ldap
             /**
              * Zend_Ldap_Collection
              */
-            require_once 'Zend/Ldap/Collection.php';
+            //require_once 'Zend/Ldap/Collection.php';
             return new Zend_Ldap_Collection($iterator);
         } else {
             $collectionClass = (string)$collectionClass;
@@ -1041,7 +1041,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception(null,
                     "Class '$collectionClass' can not be found");
             }
@@ -1049,7 +1049,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception(null,
                     "Class '$collectionClass' must subclass 'Zend_Ldap_Collection'");
             }
@@ -1253,7 +1253,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception($this, 'adding: ' . $dn->toString());
         }
         return $this;
@@ -1296,7 +1296,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception($this, 'updating: ' . $dn->toString());
             }
         }
@@ -1350,7 +1350,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Exception
              */
-            require_once 'Zend/Ldap/Exception.php';
+            //require_once 'Zend/Ldap/Exception.php';
             throw new Zend_Ldap_Exception($this, 'deleting: ' . $dn);
         }
         return $this;
@@ -1380,7 +1380,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception($this, 'getting dn');
             }
             $children[] = $childDn;
@@ -1471,7 +1471,7 @@ class Zend_Ldap
                 /**
                  * @see Zend_Ldap_Exception
                  */
-                require_once 'Zend/Ldap/Exception.php';
+                //require_once 'Zend/Ldap/Exception.php';
                 throw new Zend_Ldap_Exception($this, 'renaming ' . $from . ' to ' . $to);
             }
 
@@ -1558,7 +1558,7 @@ class Zend_Ldap
         /**
          * Zend_Ldap_Node
          */
-        require_once 'Zend/Ldap/Node.php';
+        //require_once 'Zend/Ldap/Node.php';
         return Zend_Ldap_Node::fromLdap($dn, $this);
     }
 
@@ -1585,7 +1585,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Node_Schema
              */
-            require_once 'Zend/Ldap/Node/RootDse.php';
+            //require_once 'Zend/Ldap/Node/RootDse.php';
             $this->_rootDse = Zend_Ldap_Node_RootDse::create($this);
         }
         return $this->_rootDse;
@@ -1603,7 +1603,7 @@ class Zend_Ldap
             /**
              * @see Zend_Ldap_Node_Schema
              */
-            require_once 'Zend/Ldap/Node/Schema.php';
+            //require_once 'Zend/Ldap/Node/Schema.php';
             $this->_schema = Zend_Ldap_Node_Schema::create($this);
         }
         return $this->_schema;

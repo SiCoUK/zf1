@@ -22,12 +22,12 @@
 /**
  * @see Zend_Uri
  */
-require_once 'Zend/Uri.php';
+//require_once 'Zend/Uri.php';
 
 /**
  * @see Zend_Validate_Hostname
  */
-require_once 'Zend/Validate/Hostname.php';
+//require_once 'Zend/Validate/Hostname.php';
 
 /**
  * HTTP(S) URI handler
@@ -152,7 +152,7 @@ class Zend_Uri_Http extends Zend_Uri
 
         // Validate the URI
         if ($this->valid() === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Invalid URI supplied');
         }
     }
@@ -170,7 +170,7 @@ class Zend_Uri_Http extends Zend_Uri
     public static function fromString($uri)
     {
         if (is_string($uri) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('$uri is not a string');
         }
 
@@ -179,7 +179,7 @@ class Zend_Uri_Http extends Zend_Uri
         $schemeSpecific = isset($uri[1]) === true ? $uri[1] : '';
 
         if (in_array($scheme, ['http', 'https']) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Invalid scheme: '$scheme'");
         }
 
@@ -200,7 +200,7 @@ class Zend_Uri_Http extends Zend_Uri
         $pattern = '~^((//)([^/?#]*))([^?#]*)(\?([^#]*))?(#(.*))?$~';
         $status  = @preg_match($pattern, $schemeSpecific, $matches);
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: scheme-specific decomposition failed');
         }
 
@@ -219,7 +219,7 @@ class Zend_Uri_Http extends Zend_Uri
         $pattern = '~^(([^:@]*)(:([^@]*))?@)?((?(?=[[])[[][^]]+[]]|[^:]+))(:(.*))?$~';        
         $status  = @preg_match($pattern, $combo, $matches);
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: authority decomposition failed');
         }
         
@@ -242,7 +242,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function getUri()
     {
         if ($this->valid() === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('One or more parts of the URI are invalid');
         }
 
@@ -315,7 +315,7 @@ class Zend_Uri_Http extends Zend_Uri
             self::CHAR_ALNUM . self::CHAR_MARK . ';:&=+$,' . '])+$/', $username);
 
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: username validation failed');
         }
 
@@ -332,7 +332,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function setUsername($username)
     {
         if ($this->validateUsername($username) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Username \"$username\" is not a valid HTTP username");
         }
 
@@ -382,7 +382,7 @@ class Zend_Uri_Http extends Zend_Uri
             self::CHAR_ALNUM . self::CHAR_MARK . ';:&=+$,' . '])+$/', $password);
 
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: password validation failed.');
         }
 
@@ -399,7 +399,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function setPassword($password)
     {
         if ($this->validatePassword($password) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Password \"$password\" is not a valid HTTP password.");
         }
 
@@ -454,7 +454,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function setHost($host)
     {
         if ($this->validateHost($host) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Host \"$host\" is not a valid HTTP host");
         }
 
@@ -506,7 +506,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function setPort($port)
     {
         if ($this->validatePort($port) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Port \"$port\" is not a valid HTTP port.");
         }
 
@@ -549,7 +549,7 @@ class Zend_Uri_Http extends Zend_Uri
         $pattern = '/^' . $this->_regex['path'] . '$/';
         $status  = @preg_match($pattern, $path);
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: path validation failed');
         }
 
@@ -566,7 +566,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function setPath($path)
     {
         if ($this->validatePath($path) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Path \"$path\" is not a valid HTTP path");
         }
 
@@ -627,7 +627,7 @@ class Zend_Uri_Http extends Zend_Uri
         $pattern = '/^' . $this->_regex['uric'] . '*$/';
         $status  = @preg_match($pattern, $query);
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: query validation failed');
         }
 
@@ -692,7 +692,7 @@ class Zend_Uri_Http extends Zend_Uri
 
         // Make sure the query is valid, and set it
         if ($this->validateQuery($query) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("'$query' is not a valid query string");
         }
 
@@ -735,7 +735,7 @@ class Zend_Uri_Http extends Zend_Uri
         $pattern = '/^' . $this->_regex['uric'] . '*$/';
         $status  = @preg_match($pattern, $fragment);
         if ($status === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception('Internal error: fragment validation failed');
         }
 
@@ -752,7 +752,7 @@ class Zend_Uri_Http extends Zend_Uri
     public function setFragment($fragment)
     {
         if ($this->validateFragment($fragment) === false) {
-            require_once 'Zend/Uri/Exception.php';
+            //require_once 'Zend/Uri/Exception.php';
             throw new Zend_Uri_Exception("Fragment \"$fragment\" is not a valid HTTP fragment");
         }
 
